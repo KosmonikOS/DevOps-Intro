@@ -7,3 +7,18 @@
 Commit signing is important as without it anyone can pretend to be another human by setting a name and email and create fake commits from another person.
 
 Commit signing prevents this by requiring private key to prove real authorship. If no private key isn't provided GitHub will mark it as Unverified.
+
+### Evidence of successful SSH key setup and signed commit
+
+![SSH Signing Keys](img/keys.png)
+
+The screenshot shows SSH key added to GitHub for authorization and signing.
+
+![GitHub Verified Commit Badge](img/verified_commit.png)
+
+The screenshot shows that commit is marked as **Verified** on GitHub.
+
+### Why is commit signing important in DevOps workflows?
+- Ensures commits come from trusted developers via digital signatures;
+- Tracks exactly who made code changes, aiding audits and debugging in CI/CD pipelines;
+- Protects the software supply chain by blocking unsigned commits, reducing risks of malicious code;
