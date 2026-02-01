@@ -21,4 +21,31 @@ The screenshot shows that commit is marked as **Verified** on GitHub.
 ### Why is commit signing important in DevOps workflows?
 - Ensures commits come from trusted developers via digital signatures;
 - Tracks exactly who made code changes, aiding audits and debugging in CI/CD pipelines;
-- Protects the software supply chain by blocking unsigned commits, reducing risks of malicious code;
+- Protects the software supply chain by blocking unsigned commits, reducing risks of malicious code.
+
+## Task 2
+
+### PR Template
+
+![GitHub PR Existence](img/pr_template_existence.png)
+
+This screenshot shows that PR template exists in main branch of fork repository.
+
+![GitHub PR Template](img/pr_template.png)
+
+The screenshot shows that added PR template is used to auto-fill description.
+
+![GitHub PR](img/pr.png)
+
+This screenshot shows created PR with filled sections.
+
+### Why PR Template is beneficial
+
+Using PR templates improves collaboration because:
+- PRs follow a consistent structure, making reviewing process easier;
+- Remind developers to check changes against repository style and testing policies;
+- Provide ready-to-use sections to save time (no need to manually type them every time).
+
+### Challenges Encountered
+
+No challenges were encountered during PR template setup process.
