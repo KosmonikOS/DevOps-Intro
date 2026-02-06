@@ -153,3 +153,75 @@ Tags provide stable, human-readable references to specific commits. They are ess
 - Release notes: GitHub automatically creates release pages from tags, making it easy to document changes
 - Reproducibility: Teams can always check out exact release versions for debugging or rollbacks
 
+## Task 5 — git switch vs git checkout vs git restore
+
+### git switch (Modern — Branch Operations)
+
+![git switch commands](img/switch.png)
+
+**Purpose:** Branch switching only. Clean, focused command introduced in Git 2.23.
+
+### git checkout (Legacy — Overloaded)
+
+![git checkout command](img/checkout.png)
+
+**Problem:** `git checkout` does too many things — it switches branches AND restores files. This is confusing because:
+- `git checkout branch-name` -> switches branch
+- `git checkout -- file.txt` -> discards file changes (completely different operation!)
+
+### git restore (Modern — File Operations)
+
+I've noticed that steps to demonstrate `git restore` aren't complete in lab2.md as demo.txt isn't tracked by Git.
+Hence, I've added the steps to track the file and demonstrate the restore operations.
+
+![git restore commands](img/restore.png)
+
+Here is a sequence of file states during the restore operations.
+
+Before the restore operations:
+![](img/before_restore.png)
+
+After the restore operations:
+![](img/after_restore.png)
+
+After the restore operations with preserving staged changes:
+![](img/after_restore_staged.png)
+
+Purpose: File restoration only. Replaces the file-restoring functionality of `git checkout`. Note that `git restore` only works on tracked files — files that have been committed at least once.
+
+### Command Comparison
+
+| Command | Purpose | Introduced |
+|---------|---------|------------|
+| `git switch` | Branch operations only | Git 2.23 (2019) |
+| `git restore` | File operations only | Git 2.23 (2019) |
+| `git checkout` | Both branches AND files | Legacy (confusing) |
+
+### When to Use Each
+
+- **Use `git switch`** when changing branches — it's explicit and won't accidentally overwrite files
+- **Use `git restore`** when discarding changes or restoring files from other commits — clear intent
+- **Avoid `git checkout`** for new workflows — it's ambiguous; prefer the modern alternatives for clarity and safety
+
+## Task 6 — GitHub Community Engagement
+
+### Starred Repositories
+
+I starred the course repository and the simple-container-com/api project:
+
+![Course repository starred](img/star_1.png)
+
+![simple-container-com/api starred](img/star_2.png)
+
+### Following Developers
+
+I followed the professor, TAs, and classmates:
+
+![Following list](img/followings.png)
+
+### Why GitHub Social Features Matter
+
+Starring repositories helps bookmark useful projects for future reference and shows appreciation to maintainers. High star counts signal project quality and attract more contributors, making stars a form of community endorsement in open source.
+
+Following developers enables learning from others' activity, discovering new projects through their contributions, and building professional connections. In team settings, it keeps you updated on classmates' work and facilitates collaboration beyond the classroom.
+
